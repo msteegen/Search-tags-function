@@ -60,9 +60,9 @@ function updateTags(selectedTag) {
     let newTags = []; // Hier kun je de nieuwe tags op basis van de geselecteerde tag definiëren
 
     // Voorbeeld van nieuwe tags op basis van de geselecteerde tag
-    if (selectedTag === 'food') {
-        newTags = ['gras', 'appels', 'water'];
-    } else if (selectedTag === 'kind') {
+     if (selectedTag === 'tiger') {
+        newTags = ['meat', 'fish', 'water'];
+    } else if (selectedTag === 'parrot') {
         newTags = ['bird', 'mammal', 'sea creature'];
     }
 
