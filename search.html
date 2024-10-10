@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Function</title>
+    <link rel="stylesheet" href="search.css">
+    <script src="search.js"></script>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="filterLinks()" placeholder="Search for links...">
+
+        <div id="filterButtons">
+            <button onclick="filterByTag('pigeon')">Pigeon</button>
+            <button onclick="filterByTag('penguin')">Penguin</button>
+            <button onclick="filterByTag('parrot')">Parrot</button>
+            <button onclick="filterByTag('panda')">Panda</button>
+            <button onclick="filterByTag('fox')">Fox</button>
+            <button onclick="filterByTag('zebra')">Zebra</button>
+            <button onclick="filterByTag('tiger')">Tiger</button>
+            <button onclick="filterByTag('flamingo')">Flamingo</button>
+            <button onclick="filterByTag('all')">Show All</button>
+            <div id="tagContainer"></div>
+        </div>
+    </div>
+
+    <ul id="linkList">
+        <li data-tag="flamingo">
+            <a href="#">
+                <img src="img/flamingo.jpg" alt="">
+                <p>Flamingo</p>
+            </a>
+        </li>
+        <li data-tag="panda">
+            <a href="#">
+                <img src="img/panda.jpg" alt="">
+                <p>Panda</p>
+            </a>
+        </li>
+        <li data-tag="tiger">
+            <a href="#">
+                <img src="img/tiger.jpg" alt="">
+                <p>Tiger</p>
+            </a>
+        </li>
+        <li data-tag="penguin">
+            <a href="#">
+                <img src="img/penguin.jpg" alt="">
+                <p>Penguin</p>
+         </a>
+        </li>
+        <li data-tag="parrot">
+            <a href="#">
+                <img src="img/parrot.jpg" alt="">
+                <p>Parrot</p>
+            </a>
+        </li>
+        <li data-tag="pigeon">
+            <a href="#">
+                <img src="img/pigeon.jpg" alt="">
+                <p>Pigeon</p>
+            </a>
+        </li>
+        <li data-tag="fox">
+            <a href="#">
+                <img src="img/fox.jpg" alt="">
+                <p>Fox</p>
+            </a>
+        </li>
+        <li data-tag="zebra">
+            <a href="#">
+                <img src="img/zebra.jpg" alt="">
+                <p>Zebra</p>
+            </a>
+        </li>
+        <li data-tag="flamingo">
+            <a href="#">
+                <img src="img/flamingo.jpg" alt="">
+                <p>Flamingo</p>
+            </a>
+        </li>
+        <li data-tag="panda">
+            <a href="#">
+                <img src="img/panda.jpg" alt="">
+                <p>Panda</p>
+            </a>
+        </li>
+        <li data-tag="tiger">
+            <a href="#">
+                <img src="img/tiger.jpg" alt="">
+                <p>Tiger</p>
+            </a>
+        </li>
+        <li data-tag="penguin">
+            <a href="#">
+                <img src="img/penguin.jpg" alt="">
+                <p>Penguin</p>
+         </a>
+        </li>
+        <li data-tag="parrot">
+            <a href="#">
+                <img src="img/parrot.jpg" alt="">
+                <p>Parrot</p>
+            </a>
+        </li>
+        <li data-tag="pigeon">
+            <a href="#">
+                <img src="img/pigeon.jpg" alt="">
+                <p>Pigeon</p>
+            </a>
+        </li>
+        <li data-tag="fox">
+            <a href="#">
+                <img src="img/fox.jpg" alt="">
+                <p>Fox</p>
+            </a>
+        </li>
+        <li data-tag="zebra">
+            <a href="#">
+                <img src="img/zebra.jpg" alt="">
+                <p>Zebra</p>
+            </a>
+        </li>
+        <li data-tag="flamingo">
+            <a href="#">
+                <img src="img/flamingo.jpg" alt="">
+                <p>Flamingo</p>
+            </a>
+        </li>
+        <li data-tag="panda">
+            <a href="#">
+                <img src="img/panda.jpg" alt="">
+                <p>Panda</p>
+            </a>
+        </li>
+        <li data-tag="tiger">
+            <a href="#">
+                <img src="img/tiger.jpg" alt="">
+                <p>Tiger</p>
+            </a>
+        </li>
+        <li data-tag="penguin">
+            <a href="#">
+                <img src="img/penguin.jpg" alt="">
+                <p>Penguin</p>
+         </a>
+        </li>
+        <li data-tag="parrot">
+            <a href="#">
+                <img src="img/parrot.jpg" alt="">
+                <p>Parrot</p>
+            </a>
+        </li>
+        <li data-tag="pigeon">
+            <a href="#">
+                <img src="img/pigeon.jpg" alt="">
+                <p>Pigeon</p>
+            </a>
+        </li>
+        <li data-tag="fox">
+            <a href="#">
+                <img src="img/fox.jpg" alt="">
+                <p>Fox</p>
+            </a>
+        </li>
+        <li data-tag="zebra">
+            <a href="#">
+                <img src="img/zebra.jpg" alt="">
+                <p>Zebra</p>
+            </a>
+        </li>
+        <li data-tag="flamingo">
+            <a href="#">
+                <img src="img/flamingo.jpg" alt="">
+                <p>Flamingo</p>
+            </a>
+        </li>
+        <li data-tag="panda">
+            <a href="#">
+                <img src="img/panda.jpg" alt="">
+                <p>Panda</p>
+            </a>
+        </li>
+        <li data-tag="tiger">
+            <a href="#">
+                <img src="img/tiger.jpg" alt="">
+                <p>Tiger</p>
+            </a>
+        </li>
+        <li data-tag="penguin">
+            <a href="#">
+                <img src="img/penguin.jpg" alt="">
+                <p>Penguin</p>
+         </a>
+        </li>
+        <li data-tag="parrot">
+            <a href="#">
+                <img src="img/parrot.jpg" alt="">
+                <p>Parrot</p>
+            </a>
+        </li>
+        <li data-tag="pigeon">
+            <a href="#">
+                <img src="img/pigeon.jpg" alt="">
+                <p>Pigeon</p>
+            </a>
+        </li>
+        <li data-tag="fox">
+            <a href="#">
+                <img src="img/fox.jpg" alt="">
+                <p>Fox</p>
+            </a>
+        </li>
+        <li data-tag="zebra">
+            <a href="#">
+                <img src="img/zebra.jpg" alt="">
+                <p>Zebra</p>
+            </a>
+        </li>
+    </ul>
+    
+    <div id="errorMessage">
+        <p>Sorry no results were found</p>
+    </div> <!-- Error message element -->
+
+</body>
+</html
