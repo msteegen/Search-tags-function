@@ -23,12 +23,12 @@ function filterByTag(tag) {
     const li = ul.getElementsByTagName('li');
     let hasResults = false;
 
-    // Verberg alle items en tags
+    // Hide all items and tags
     Array.from(li).forEach(item => {
         item.style.display = 'none';
     });
 
-    // Toon alleen de items die bij de geselecteerde tag horen
+    // Show only the items that belong to the selected tag
     Array.from(li).forEach(item => {
         const itemTag = item.getAttribute('data-tag');
 
@@ -38,10 +38,10 @@ function filterByTag(tag) {
         }
     });
 
-    // Toon of verberg het foutbericht op basis van resultaten
+    // Show or hide the error message based on results
     document.getElementById('errorMessage').style.display = hasResults ? 'none' : 'block';
 
-    // Reset het zoekveld als 'Show All' is geselecteerd
+    // Reset the search field if 'Show All' is selected
     if (tag === 'all') {
         input.value = '';
         Array.from(li).forEach(item => {
@@ -49,28 +49,28 @@ function filterByTag(tag) {
         });
     }
 
-    // Hier kun je de nieuwe tags toevoegen die bij de geselecteerde tag horen
+    // Here you can add the new tags that belong to the selected tag
     updateTags(tag);
 }
 
 function updateTags(selectedTag) {
-    const tagContainer = document.getElementById('tagContainer'); // Zorg ervoor dat je een container hebt voor de tags
-    tagContainer.innerHTML = ''; // Maak de huidige tags leeg
+    const tagContainer = document.getElementById('tagContainer'); // Make sure you have a container for the tags
+    tagContainer.innerHTML = ''; // Clear the current tags
 
-    let newTags = []; // Hier kun je de nieuwe tags op basis van de geselecteerde tag definiëren
+    let newTags = []; // Here you can define the new tags based on the selected tag
 
-    // Voorbeeld van nieuwe tags op basis van de geselecteerde tag
-     if (selectedTag === 'tiger') {
-        newTags = ['meat', 'fish', 'water'];
-    } else if (selectedTag === 'parrot') {
-        newTags = ['bird', 'mammal', 'sea creature'];
+    // Example of new tags based on the selected tag
+    if (selectedTag === 'husqvarna') {
+        newTags = ['592 XP® G', 'Xcite™ Z350', 'Lawn Mowers'];
+    } else if (selectedTag === 'felco') {
+        newTags = ['2', '4', '600'];
     }
 
-    // Voeg de nieuwe tags toe aan de tagContainer
+    // Add the new tags to the tagContainer
     newTags.forEach(tag => {
         const tagElement = document.createElement('span');
         tagElement.textContent = tag;
-        tagElement.className = 'tag'; // Voeg een klasse toe voor styling
+        tagElement.className = 'tag'; // Add a class for styling
         tagContainer.appendChild(tagElement);
     });
 }
