@@ -60,10 +60,10 @@ function updateTags(selectedTag) {
     let newTags = []; // Here you can define the new tags based on the selected tag
 
     // Example of new tags based on the selected tag
-    if (selectedTag === 'husqvarna') {
-        newTags = ['592 XP® G', 'Xcite™ Z350', 'Lawn Mowers'];
-    } else if (selectedTag === 'felco') {
-        newTags = ['2', '4', '600'];
+    if (selectedTag === 'flamingo') {
+        newTags = ['Algae', 'Small Crustaceans', 'Insects'];
+    } else if (selectedTag === 'panda') {
+        newTags = ['Fruits', 'Leaves', 'Insects'];
     }
 
     // Add the new tags to the tagContainer
